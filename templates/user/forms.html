@@ -41,7 +41,7 @@
       }
       .login-btn {
         border: none;
-        background-color: #FC6830;
+        background-color: #fc6830;
         color: #ffffff;
         font-size: 1rem;
         padding: 0.7em 2em;
@@ -71,7 +71,7 @@
         border-radius: 8px;
         border: none;
         padding: 0.8em 4em;
-        background-color: #FC6830;
+        background-color: #fc6830;
         color: #ffffff;
         font-size: 1rem;
         margin: 0.5em 0em 2em;
@@ -115,7 +115,7 @@
         cursor: pointer;
       }
       input[type="radio"]:checked {
-        background-color: #FC6830;
+        background-color: #fc6830;
       }
       .category-select {
         font-size: 1rem;
@@ -144,6 +144,15 @@
         font-weight: 400;
         color: #877f7f;
       }
+      /* responsiveness media queries */
+      @media (width <= 520px) {
+        .login-btn {
+          display: none;
+        }
+        main {
+          padding: 1em 2.4em;
+        }
+      }
 
       /* styling for create password page */
 
@@ -157,12 +166,19 @@
     </style>
   </head>
   <body>
-    <header class="container d-flex justify-content-between align-items-center py-3">
+    <header
+      class="container d-flex justify-content-between align-items-center py-3"
+    >
       <!-- Logo Section -->
       <div class="logo">
-        <img src="../../static/logo.png" alt="Ibom OS" class="img-fluid" style="max-width: 150px;">
+        <img
+          src="../../static/logo.png"
+          alt="Ibom OS"
+          class="img-fluid"
+          style="max-width: 150px"
+        />
       </div>
-    
+
       <!-- Login Button -->
       <div>
         <button class="btn btn-primary login-btn">Login</button>
@@ -171,9 +187,7 @@
     <hr />
 
     <main>
-    
-
-      <form action="" method="post" id="form" >
+      <form action="" method="post" id="form">
         <!-- sign up first page personal info -->
         <div class="sign-up-personal step">
           <h1>Sign Up</h1>
@@ -186,7 +200,6 @@
               type="text"
               name="firstname"
               id="firstname"
-            
             />
           </div>
 
@@ -235,7 +248,7 @@
           <p class="category-select">Select Your Category</p>
 
           <!-- radio selection -->
-          
+
           <div class="user-details-input">
             <input type="radio" name="category" id="user" />
             <label for="user"> User </label>
@@ -248,7 +261,6 @@
 
           <!-- radio selection ends -->
 
-          
           <div>
             <button type="submit" onclick="showSteps(1)">Next</button>
           </div>
@@ -324,15 +336,13 @@
 
           steps[currentStep].classList.add("hide");
           steps[currentStep + 1].classList.replace("hide", "show");
-        }
-        else if (currentStep == 1){
+        } else if (currentStep == 1) {
           stepProgress[currentStep].classList.replace("show", "hide");
-          stepProgress[currentStep+1].classList.replace("hide", "show");
+          stepProgress[currentStep + 1].classList.replace("hide", "show");
 
           steps[currentStep].classList.replace("show", "hide");
-          steps[currentStep+1].classList.replace("hide", "show");
+          steps[currentStep + 1].classList.replace("hide", "show");
         }
-      
       };
     </script>
 
