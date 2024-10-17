@@ -51,6 +51,7 @@
       }
 
       form {
+        /* border: #000000 solid; */
         max-width: 500px;
         margin: 0 auto;
       }
@@ -67,6 +68,10 @@
         font-weight: 600;
         text-align: center;
       }
+      button> a{
+        color: white;
+        text-decoration: none;
+      }
       h1 {
         margin-top: 2.3em;
         font-size: 2rem;
@@ -82,22 +87,19 @@
         font-weight: 400;
       }
 
-      label {
-        color: #685f5f;
-        cursor: pointer;
-        font-weight: 500;
-        font-size: 1rem;
-      }
-      a{
-        text-decoration: none;
-        color: white;
+      .otp {
+        display: flex;
+        gap: 0.2em;
+        margin-bottom: 2em;
+        /* border: red solid; */
       }
       input {
-        width: 100%;
+        width: 20%;
+        height: 12vh;
+        font-size: 1rem;
+        padding: 0.6em 2em;
         outline: none;
         border: solid #a09999 0.5px;
-        margin: 0.8em 0em 1.4em;
-        padding: 1em 1.2em;
         border-radius: 8px;
       }
       .login {
@@ -129,23 +131,25 @@
       <!-- form starts here -->
       <form action="" method="post" class="container-{540px} form-container">
         <div class="login">
-          <h1>Reset Password</h1>
+          <h1>Email Verification</h1>
           <p class="action-text">
-            Enter your registered email address, we will send you instructions
-            on how to reset your password
+            An OTP has to been sent to this email address
+            edithprecious@gmail.com. Enter OTP pin below
           </p>
 
-          <label for="email" class="email"> Email </label>
-          <div>
-            <input type="email" name="email" id="email" />
+          <div class="otp">
+            <input type="number" name="number" id="number" />
+            <input type="number" name="number" id="number" />
+            <input type="number" name="number" id="number" />
+            <input type="number" name="number" id="number" />
+            <input type="number" name="number" id="number" />
           </div>
 
           <div>
-            <button type="submit"><a href="./OTP.html">
-              Send OTP Pin
+            <button type="submit"><a href="./createpassword.html">
+              Verify
             </a></button>
           </div>
-          <p class="return">Go back My Rental System Web</p>
         </div>
       </form>
       <!-- form ends here -->
